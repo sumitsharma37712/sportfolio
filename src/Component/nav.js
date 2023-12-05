@@ -63,19 +63,19 @@ const Nav = () =>{
                         'absolute left-[-100%] w-100 h-screen ease-in-out duration-1000 lg:hidden'}>
                             <ul className="h-screen  text-center py-48 flex flex-col gap-10 ">
                                 <li className="nav-item mt-2">
-                                    <Link className="nav-link" href="./">Home</Link>
+                                    <Link className="nav-link" to="./">Home</Link>
                                 </li>
                                 <li className="nav-item mt-2">
-                                    <Link className="nav-link" href="./about">About Me</Link>
+                                    <Link className="nav-link" to="./about">About Me</Link>
                                 </li>
                                 <li className="nav-item mt-2">
-                                    <Link className="nav-link" href="./service">Services</Link>
+                                    <Link className="nav-link" to="./service">Services</Link>
                                 </li>
                                 <li className="nav-item mt-2">
-                                    <Link className="nav-link" href="./project">Projects</Link>
+                                    <Link className="nav-link" to="./project">Projects</Link>
                                 </li>
                                 <li className="nav-item mt-2">
-                                    <Link className="nav-link" href="./contact">Contact Me</Link>
+                                    <Link className="nav-link" to="./contact">Contact Me</Link>
                                 </li>
 
                             </ul>
