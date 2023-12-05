@@ -58,7 +58,9 @@ const Nav = () =>{
                     <div className="lg:hidden z-50 text-white" onClick={handleNav} >
                         <FaBars size={20} className=" mr-4 cursor-pointer" />
                     </div>
-                    <div className={showNavbar ?'overflow-hidden h-screen w-full  ease-in duration-500 bg-black/90 text-white lg:hidden   absolute left-0 top-[-100%]  ' : 'overflow-hidden hidden absolute left-0 top-[-100%] w-full h-screen ease-in-out duration-500'}>
+                    <div className={showNavbar  ?'overflow-y-hidden lg:hidden ease-in duration-300 fixed w-100 z-40 top-0 left-0 bg-black/90 text-white h-screen flex flex-col'
+                        :
+                        'absolute left-[-100%] w-100 h-screen ease-in-out duration-1000 lg:hidden'}>
                             <ul className="h-screen  text-center py-48 flex flex-col gap-10 ">
                                 <li className="nav-item mt-2">
                                     <a className="nav-link" href="./">Home</a>
