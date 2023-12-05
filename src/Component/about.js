@@ -1,6 +1,10 @@
 import React from "react";
 import {Link} from 'react-router-dom'
 import Typewriter from 'typewriter-effect'
+import {FaHtml5,FaBootstrap,FaReact,FaNodeJs,FaPhp,FaWordpress,FaGithub } from 'react-icons/fa'
+import {IoLogoCss3,IoLogoJavascript} from "react-icons/io"
+import { BiLogoTailwindCss, BiLogoMongodb } from "react-icons/bi";
+import { SiMysql } from "react-icons/si";
 
 const About =()=>{
 
@@ -58,8 +62,69 @@ const About =()=>{
                 </div>
             </div>
 
+            {/* skills design */}
+
+            <div className="grid gid-cols-1 md:grid-cols-2 bg-black text-white p-5 gap-5 sm:gap-0">
+                <div className="grid grid-cols-1  bg-black">
+                    <div className="bg-black text-white py-2 md:p-5">
+                        <div className="flex justify-between mb-1">
+                            <span className="text-base font-medium text-blue-700 dark:text-white">FrontEnd Design</span>
+                            <span className="text-sm font-medium text-blue-700 dark:text-white">80%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div className="bg-blue-600 h-2.5 rounded-full" style={{width:'80%'}}></div>
+                        </div>
+                    </div>
+
+                    <div className="bg-black text-white py-2 md:p-5">
+                        <div className="flex justify-between mb-1">
+                            <span className="text-base font-medium text-blue-700 dark:text-white">Backend Develop</span>
+                            <span className="text-sm font-medium text-blue-700 dark:text-white">77%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div className="bg-blue-600 h-2.5 rounded-full" style={{width:'77%'}}></div>
+                        </div>
+                    </div>
+
+                    <div className="bg-black text-white py-2 md:p-5">
+                        <div className="flex justify-between mb-1">
+                            <span className="text-base font-medium text-blue-700 dark:text-white">Programming</span>
+                            <span className="text-sm font-medium text-blue-700 dark:text-white">70%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div className="bg-blue-600 h-2.5 rounded-full" style={{width:'70%'}}></div>
+                        </div>
+                    </div>
+
+                    <div className="bg-black text-white py-2 md:p-5">
+                        <div className="flex justify-between mb-1">
+                            <span className="text-base font-medium text-blue-700 dark:text-white">Web Development</span>
+                            <span className="text-sm font-medium text-blue-700 dark:text-white">70%</span>
+                        </div>
+                        <div className="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700">
+                            <div className="bg-blue-600 h-2.5 rounded-full" style={{width:'70%'}}></div>
+                        </div>
+                    </div>
+                </div>
+                <div className="grid grid-cols-3 justify-items-center items-center gap-3  bg-black">
+                    <FaHtml5 className="skill" />
+                    <IoLogoCss3 className="skill" />
+                    <IoLogoJavascript className="skill" />
+                    <FaBootstrap className="skill" />
+                    <BiLogoTailwindCss className="skill" />
+                    <FaReact className="skill" />
+                    <FaNodeJs className="skill" />
+                    <FaPhp className="skill" />
+                    < BiLogoMongodb className="skill" />
+                    <SiMysql className="skill" />
+                    <FaWordpress className="skill" />
+                    <FaGithub className="skill" />
+                </div>
+            </div>
+
+
             {/* education and exprience details */}
-            <div className="grid grid-cols-1 md:grid-cols-2 w-100 bg-black text-white p-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 w-100 bg-black text-white p-5 gap-5 sm:gap-0">
                 <div  className="md:p-8">
                     {/* exprience details */}
                     <h3 className="">Experience </h3>
