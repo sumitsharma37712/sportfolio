@@ -1,6 +1,93 @@
-.App {
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins';
+}
+
+.bar{
+  width: 75%;
+}
+.hero-maincenter{
+  width: 100%;
+}
+.hero-headder{
+  width: 100%;
+  display: flex;
+}
+.hero-maincenter h1{
+  
+  font-weight: 700;
+  color: white;
+
+}
+
+
+
+
+
+.header{
+  height: 50px;
+  width:100%;
+  color: #61dafb;
+  background-color: aquamarine;
+
+}
+.footer{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  /* position: fixed;  */
+  width: 100%;
+  /* gap: 400px; */
+  margin-top: 60px;
+
+}
+.footer h1{
+  margin: auto ;
   text-align: center;
 }
+.header ul {
+
+}
+.header ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
+  
+}
+.header ul link{
+  text-decoration: none
+}
+
+.sign{
+  width: 20%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-basis: auto;
+
+}
+.sign h1{
+  text-align: center;
+}
+.sign .inputbox{
+  padding: 10px;
+  margin: 10px;
+}
+.sign .button{
+  max-width: 50%;
+  height: 30px;
+  width: 30%;
+  font-size: 16px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  background-color: aquamarine;
+  cursor: pointer;
+}
+
+
+
 
 .App-logo {
   height: 40vmin;
