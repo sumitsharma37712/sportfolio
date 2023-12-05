@@ -42,7 +42,7 @@ const Contact=()=>{
 
     return(
         <div>
-            <div className="h-[100px]">
+            <div className="h-[100px] bg-black">
                 <nav className="flex align-middle py-4 justify-center" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center space-x-1  md:space-x-2 rtl:space-x-reverse">
                         <li class="inline-flex items-center">

@@ -11,7 +11,7 @@ const About =()=>{
 
     return(
         <div>
-            <div className="h-[100px]">
+            <div className="h-[100px] bg-black">
                 <nav className="flex align-middle py-4 justify-center" aria-label="Breadcrumb">
                     <ol className="inline-flex items-center space-x-1  md:space-x-2 rtl:space-x-reverse">
                         <li className="inline-flex items-center">
@@ -34,8 +34,8 @@ const About =()=>{
                     </ol>
                 </nav>
             </div>
-            <div className="flex flex-col-reverse md:flex-row dark:bg-black text-white">
-                <div className="flex flex-col  col-sm-12 col-lg-8 col-md-6 justify-center px-5 items-start">  
+            <div className="flex flex-col-reverse md:flex-row  dark:bg-black text-white sm:gap-0">
+                <div className="flex flex-col col-sm-12 col-lg-8 col-md-6 justify-center items-start px-4">  
                     <h2>My Name is Sumit Sharma and I  am a </h2>
                     <h2 className="block sm:flex gap-2"><Typewriter
                         onInit={(typewriter) => {
@@ -53,10 +53,11 @@ const About =()=>{
                                 .start()
                         }}
                     /></h2>
+                    <p>1 years experienced Back End Developer with hands-on experience in identifying web-based user interactions along with designing and implementing highly-responsive user interface components by deploying React concepts. Proficient in translating designs and wireframes into high-quality code, and writing application interface code via JavaScript and Node JS workflows. Adept at monitoring and maintaining frontend performance and troubleshooting and debugging the same to bolster overall performance.</p>
 
                     <p>I am skilled for backend Developer and i build a web application for all i most using skills html, css, nodejs, reactjs,mongoDB for Database Management.</p>
                 </div>
-                <div className="col-sm-12 col-lg-4 col-md-6 px-5">
+                <div className="col-sm-12 col-lg-4 col-md-6  px-4 py-3">
                         <img src='https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt="images" className="" />
                         
                 </div>
@@ -64,7 +65,7 @@ const About =()=>{
 
             {/* skills design */}
 
-            <div className="grid gid-cols-1 md:grid-cols-2 bg-black text-white p-5 gap-5 sm:gap-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 bg-black text-white p-4 gap-5 sm:p-0 sm:gap-0">
                 <div className="grid grid-cols-1  bg-black">
                     <div className="bg-black text-white py-2 md:p-5">
                         <div className="flex justify-between mb-1">
@@ -124,7 +125,7 @@ const About =()=>{
 
 
             {/* education and exprience details */}
-            <div className="grid grid-cols-1 md:grid-cols-2 w-100 bg-black text-white p-5 gap-5 sm:gap-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 w-100 bg-black text-white p-4 gap-5 sm:gap-0">
                 <div  className="md:p-8">
                     {/* exprience details */}
                     <h3 className="">Experience </h3>

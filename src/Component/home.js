@@ -67,13 +67,14 @@ const Home=()=>{
                 {/*About Me */}
 
                 <div className="w-100 bg-black text-white mx-auto " id="about">
-                    <h1 className="text-2xxl font-semibold text-center  ">About Me  </h1>
+                    <h1 className="text-2xxl font-semibold text-center hidden md:block ">About Me  </h1>
                     <div className="flex mx-auto flex-col md:flex-row">
                         <div className="col-lg-4 col-md-6 mx-auto">
                             <img src={self} className=""  alt=""/>
                         </div>
                         <div className="col-lg-8 col-md-6">
                             <div className="col-lg-9 py-3 mx-auto">
+                                <h1 className="text-2xxl font-semibold md:hidden  ">About Me  </h1>
                                 <p>1 years experienced Back End Developer with hands-on experience in identifying web-based user interactions along with designing and implementing highly-responsive user interface components by deploying React concepts. Proficient in translating designs and wireframes into high-quality code, and writing application interface code via JavaScript and Node JS workflows. Adept at monitoring and maintaining frontend performance and troubleshooting and debugging the same to bolster overall performance.</p>
                                 
                                 <button type="button" className="focus:outline-none  text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 rounded-2xl dark:hover:bg-purple-700 dark:focus:ring-purple-900"><Link to="/#contact" className="nav-link">Let's Talk</Link></button>
@@ -238,7 +239,9 @@ const Home=()=>{
                             <a href="https://booleanai.com " target="blank">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Boolean ai</h5>
                             </a>
-                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                Boolean ai is a IT industry for build,services and all project development part. In industry here are development and service company reach out to a wider group of audience, and manage all your business I.T. needs in a single place. Let our team do the I.T. magic for you.  
+                            </p>
                             <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Read more <div className="px-1"></div> <FaArrowRight/>
                             </div>
@@ -252,7 +255,7 @@ const Home=()=>{
                             <a href="#">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Attendence Management System</h5>
                             </a>
-                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">This is a web applkicaion for Attendence management system to all employee details when u checkin and checkout and other some details.</p>
                             <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Read more<div className="px-1"></div><FaArrowRight/>
 
@@ -267,7 +270,7 @@ const Home=()=>{
                             <a href="#">
                                 <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Chat Applications</h5>
                             </a>
-                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Build a chat application to use a chat for anonymous User and makes some friends and post the all thought u show again and deserves that to use and make some new friend . this is a pravacy and secure alldata form other user.</p>
                             <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                 Read more<div className="px-1"></div><FaArrowRight/>
                             </div>
