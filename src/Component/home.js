@@ -69,10 +69,10 @@ const Home=()=>{
                 <div className="w-100 bg-black text-white mx-auto " id="about">
                     <h1 className="text-2xxl font-semibold text-center  ">About Me  </h1>
                     <div className="flex mx-auto flex-col md:flex-row">
-                        <div className="col-lg-4">
+                        <div className="col-lg-4 col-md-6 mx-auto">
                             <img src={self} className=""  alt=""/>
                         </div>
-                        <div className="col-lg-8">
+                        <div className="col-lg-8 col-md-6">
                             <div className="col-lg-9 py-3 mx-auto">
                                 <p>1 years experienced Back End Developer with hands-on experience in identifying web-based user interactions along with designing and implementing highly-responsive user interface components by deploying React concepts. Proficient in translating designs and wireframes into high-quality code, and writing application interface code via JavaScript and Node JS workflows. Adept at monitoring and maintaining frontend performance and troubleshooting and debugging the same to bolster overall performance.</p>
                                 
