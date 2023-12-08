@@ -1,4 +1,4 @@
-import {React, useRef} from "react";
+import {React, useRef, useState} from "react";
 import {Link} from "react-router-dom"
 import Typewriter from 'typewriter-effect'
 import { FaWhatsapp,FaEnvelope,FaArrowRight} from 'react-icons/fa'
@@ -8,7 +8,16 @@ import emailjs from '@emailjs/browser'
 
 import self from '../asset/src/imageself.png'
 import boolean from '../asset/src/booleanai.png'
+import Projectapi from './API/projectapi'
+import serviceapi from './API/serviceapi'
 const Home=()=>{
+
+    
+   const  [projectData ,setProjectData]=useState(Projectapi)
+   const [serviceData,setserviceData]=useState(serviceapi)
+//    setProjectData(Projectapi)
+//    console.log({data:Projectapi})
+
     const form = useRef();
     const sendEmail = (e) => {
 
@@ -28,7 +37,7 @@ const Home=()=>{
         <div>
             <div className="row bg-black dark:bg-dark m-0 text-white">
                 {/* <div className="hero-main" style={{height:'100vh',backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }}> */}
-                <div className="hero-main aligntop" style={{height:'100vh',background:'black',backgroundImage: `url()`, backgroundRepeat: "no-repeat", backgroundSize: "cover",backgroundPosition:"fixed"}}>
+                <div className="hero-main aligntop bg-dark" style={{height:'100vh',background:'black',backgroundImage: `url()`, backgroundRepeat: "no-repeat", backgroundSize: "cover",backgroundPosition:"fixed"}}>
                     <div className="">
                         <div className="col-lg-6 col-md-8 col-sm-12 mx-auto text-center">
                             <h2>Hello,</h2>
@@ -67,7 +76,7 @@ const Home=()=>{
                 {/*About Me */}
 
                 <div className="w-100 bg-black text-white mx-auto " id="about">
-                    <h1 className="text-2xxl font-semibold text-center hidden md:block ">About Me  </h1>
+                    <h1 className="text-2xxl py-3 font-semibold text-center hidden md:block ">About Me  </h1>
                     <div className="flex mx-auto flex-col md:flex-row">
                         <div className="col-lg-4 col-md-6 mx-auto">
                             <img src={self} className=""  alt=""/>
@@ -152,132 +161,63 @@ const Home=()=>{
 
 
                 {/* What I Do */}
-                <div className="w-100 bg-black text-white mx-auto">
+                <div className="w-100 bg-dark text-white mx-auto">
                 <h2 className="text-center py-3">What I Do</h2>
-                    <div className="grid grid-cols-1 py-5  xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-4 ">
-                        <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
-                            {/* <a href="#">
-                                <img className="rounded-t-lg" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" alt="" />
-                            </a> */}
-                            <div className="p-5">
-                                <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Web Developement</h5>
-                                </a>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
-                            {/* <a href="#">
-                                <img className="rounded-t-lg" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" alt="" />
-                            </a> */}
-                            <div className="p-5">
-                                <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Backend Developement</h5>
-                                </a>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                <div className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
-                            {/* <a href="#">
-                                <img className="rounded-t-lg" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" alt="" />
-                            </a> */}
-                            <div className="p-5">
-                                <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Database Management</h5>
-                                </a>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
-                            {/* <a href="#">
-                                <img className="rounded-t-lg" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" alt="" />
-                            </a> */}
-                            <div className="p-5">
-                                <a href="#">
-                                    <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Frontend Develoment</h5>
-                                </a>
-                                <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                    Read more
-                                    <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                        <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>  
+                <div className="grid grid-cols-1 py-5  xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-4 px-2">
+                    {
+                        Object.values(serviceData).map((services) => {
+                            // console.log(user) 
+                            const {id,servicename,discriptions}=services;
 
-                    </div>
+                            return(
+                                <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
+                                {/* <a href="#">
+                                    <img className="rounded-t-lg" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" alt="" />
+                                </a> */}
+                                <div className="p-5">
+                                    <a href="#">
+                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{servicename}</h5>
+                                    </a>
+                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">{discriptions}</p>
+                                    <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        Read more <div className="px-1"></div> <FaArrowRight/>
+                                    </div>
+                                </div>
+                            </div>
+                            )
+                        })
+                    }
+                </div>
                     
                 </div>
 
                 {/*build production  */}
-                <h2 className="text-center py-3">My Recent Work</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto py-4 gap-3">                    
-                    <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
-                        <a href="#">
-                            <img className="rounded-t-lg" src={boolean} alt="" />
-                        </a>
-                        <div className="py-5 px-2">
-                            <a href="https://booleanai.com " target="blank">
-                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Boolean ai</h5>
-                            </a>
-                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-                                Boolean ai is a IT industry for build,services and all project development part. In industry here are development and service company reach out to a wider group of audience, and manage all your business I.T. needs in a single place. Let our team do the I.T. magic for you.  
-                            </p>
-                            <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Read more <div className="px-1"></div> <FaArrowRight/>
-                            </div>
-                        </div>
-                    </div>  
-                    <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
-                        <a href="#">
-                            <img className="rounded-t-lg" src="https://ceblog.s3.amazonaws.com/wp-content/uploads/2021/03/10114044/image2-8.png" alt="" />
-                        </a>
-                        <div className="py-5 px-2">
-                            <a href="#">
-                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Attendence Management System</h5>
-                            </a>
-                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">This is a web applkicaion for Attendence management system to all employee details when u checkin and checkout and other some details.</p>
-                            <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Read more<div className="px-1"></div><FaArrowRight/>
-
-                            </div>
-                        </div>
-                    </div>  
-                    <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
-                        <a href="#">
-                            <img className="rounded-t-lg" src="https://ceblog.s3.amazonaws.com/wp-content/uploads/2021/03/10114044/image2-8.png" alt="" />
-                        </a>
-                        <div className="py-5 px-2">
-                            <a href="#">
-                                <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Chat Applications</h5>
-                            </a>
-                            <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Build a chat application to use a chat for anonymous User and makes some friends and post the all thought u show again and deserves that to use and make some new friend . this is a pravacy and secure alldata form other user.</p>
-                            <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Read more<div className="px-1"></div><FaArrowRight/>
-                            </div>
-                        </div>
-                    </div>  
+                <h2 className="text-center py-3">My Recent Work</h2>               
+                
+                {/* <Project/> */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mx-auto py-4 gap-3">
+                {
+                    Object.values(projectData).map((user) => {
+                        // console.log(user)
+                        return(
+                            <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
+                                <a href="#">
+                                    <img className="rounded-t-lg" src={user.image} alt="webpage" />
+                                </a>
+                                <div className="py-5 px-2">
+                                    <a href="https://booleanai.com " target="blank">
+                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{user.name}</h5>
+                                    </a>
+                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400"> {user.discription} </p>
+                                    <div href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                        Read more <div className="px-1"></div> <FaArrowRight/>
+                                    </div>
+                                </div>
+                            </div>  
+                        )
+                    })
+                }
                 </div>
-
 
                 {/* contact us here  */}
                 <h2 id="contact" className="text-center py-3">Contact us</h2>
