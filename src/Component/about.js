@@ -171,8 +171,9 @@ const About =()=>{
                             <h6>BTEUP Board</h6>
                             <p>Diploma (Computer Science & Engineering)</p>
                         </div>
-                        <div>
+                        <div className="text-center">
                             <p>2019-2022</p>
+                            <p>78%</p>
                         </div>
                     </div>
                     <div className="flex justify-between text-sm py-2">
@@ -180,8 +181,9 @@ const About =()=>{
                             <h6>UP Board</h6>
                             <p>Intermediate</p>
                         </div>
-                        <div>
+                        <div className="text-center">
                             <p>2018-2019</p>
+                            <p>62%</p>
                         </div>
                     </div>
                     <div className="flex justify-between text-sm py-2">
@@ -189,8 +191,9 @@ const About =()=>{
                             <h6>UP Board</h6>
                             <p>High School</p>
                         </div>
-                        <div>
+                        <div className="text-center">
                             <p>2016-2017</p>
+                            <p>78%</p>
                         </div>
                     </div>
                     

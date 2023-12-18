@@ -29,7 +29,8 @@
 }
 
 .skill{
-    font-size:40px
+    font-size:40px;
+    cursor: pointer;
 }
 .logoswipe{
     height:200px;

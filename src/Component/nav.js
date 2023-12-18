@@ -44,7 +44,7 @@ const Nav = () =>{
                     <div className=" flex justify-between ">
                         <Link  className='nav-link' to='https://www.facebook.com/profile.php?id=100025966956280' target={"__blank"}><FaFacebookF className="mx-4 " /></Link>
                         <Link  className='nav-link' to='https://wa.me/9125479651' target={"__blank"}><FaWhatsapp className="mx-4 " /></Link>
-                        <Link  className='nav-link' to='https://www.instagram.com/sumitsharma3344/?next=%2F' target={"__blank"}><FaInstagram className="mx-4 " /></Link>
+                        <Link  className='nav-link' to='https://www.instagram.com/sumitsharma3344/' target={"__blank"}><FaInstagram className="mx-4 " /></Link>
                         <Link  className='nav-link' to='https://www.twitter.com/'target={"__blank"}><RiTwitterXFill className="mx-4 hidden sm:block" /></Link>
                         <Link  className='nav-link' to='https://www.linkedin.com/in/sumit-sharma-57303a230/' target={"__blank"}><FaLinkedin className="mx-4 " /></Link>
 

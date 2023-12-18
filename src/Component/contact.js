@@ -41,7 +41,7 @@ const Contact=()=>{
 
 
     return(
-        <div>
+        <>
             <div className="h-[100px] bg-dark">
                 <nav className="flex align-middle py-4 justify-center" aria-label="Breadcrumb">
                     <ol class="inline-flex items-center  rtl:space-x-reverse ol">
@@ -133,8 +133,12 @@ const Contact=()=>{
                     </div>
                 </div>
             </div>
+            <div className="grid grid-cols-4 ">
+                
+            </div>
 
-        </div>
+
+        </>
     )
 }
 export default Contact

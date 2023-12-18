@@ -62,8 +62,8 @@ const Home=()=>{
                             
             
                             <p>I am skilled for backend Developer and i build a web application for all i most using skills html, css, nodejs, reactjs,mongoDB for Database Management.</p>
-                            <button type="button" className="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 rounded-2xl dark:hover:bg-purple-700 dark:focus:ring-purple-900"><a href="../asset/CV/MyResume.pdf" target={"blank"} className="nav-link" >GET CV </a></button>
-                            <button type="button" className="focus:outline-none mx-5 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 rounded-2xl dark:hover:bg-purple-700 dark:focus:ring-purple-900"><Link to="/#contact" className="nav-link">Let's Talk</Link></button>
+                            <button type="button" className="focus:outline-none text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 rounded-2xl dark:hover:bg-purple-700 dark:focus:ring-purple-900"><a href="../asset/CV/sumitresume1.pdf" target={"blank"} className="nav-link" >GET CV </a></button>
+                            <button type="button" className="focus:outline-none mx-5 text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 rounded-2xl dark:hover:bg-purple-700 dark:focus:ring-purple-900"><Link to="/contact" className="nav-link">Let's Talk</Link></button>
                         </div>
                         {/* <div className="col-lg-6 col-md-6 col-sm-12 px-5"style={{height:'100vh',backgroundImage: `url(${self})`, backgroundRepeat: "no-repeat", backgroundSize: "cover",backgroundPosition:"fixed"}}>
                             <img src={self} className="w-100 overflow-hidden "  alt=""/>
@@ -86,7 +86,7 @@ const Home=()=>{
                                 <h1 className="text-2xxl font-semibold md:hidden  ">About Me  </h1>
                                 <p>1 years experienced Back End Developer with hands-on experience in identifying web-based user interactions along with designing and implementing highly-responsive user interface components by deploying React concepts. Proficient in translating designs and wireframes into high-quality code, and writing application interface code via JavaScript and Node JS workflows. Adept at monitoring and maintaining frontend performance and troubleshooting and debugging the same to bolster overall performance.</p>
                                 
-                                <button type="button" className="focus:outline-none  text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 rounded-2xl dark:hover:bg-purple-700 dark:focus:ring-purple-900"><Link to="/#contact" className="nav-link">Let's Talk</Link></button>
+                                <button type="button" className="focus:outline-none  text-white bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium  text-sm px-5 py-2.5 mb-2 dark:bg-purple-600 rounded-2xl dark:hover:bg-purple-700 dark:focus:ring-purple-900"><Link to="/contact" className="nav-link">Let's Talk</Link></button>
                             </div>
                         </div>
 
@@ -267,7 +267,7 @@ const Home=()=>{
                                 <input type="email" className='h-[50px] border border-3 text-black border-gray-400 p-2' name="senderemail" placeholder="Enter email id" />
                                 <input type="number" className='h-[50px] border border-3 text-black border-gray-400 p-2' name="senderphone" placeholder="Enter contact number" />
                                 <input type="text" className='h-[50px] border border-3 text-black border-gray-400 p-2' name="sendermessage" placeholder="Enter Massages" />
-                                <button className='max-w-[150px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-4 p-2' type="submit" >Contact Me</button>
+                                <button className='max-w-[150px] bg-gradient-to-r from-cyan-500 to-blue-500 rounded-4 p-2' type="submit" >Send</button>
                             </form>
                         </div>
                     </div>
