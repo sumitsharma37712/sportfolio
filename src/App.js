@@ -13,10 +13,14 @@ import Footer from './Component/footer'
 import Project from './Component/project'
 import Service from './Component/services'
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import Aos from 'aos';
+import 'aos/dist/aos.css'
 
 function App() {
+  Aos.init();
   return (
     <div className="App">
+      
       <BrowserRouter>
       <Nav/>
       <Routes>

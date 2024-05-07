@@ -3,10 +3,11 @@ import boolean from '../../asset/src/booleanai.png'
 import ams from '../../asset/src/IMG-20231014-WA0008.jpg'
 import prereport from '../../asset/src/pre.png'
 import college from '../../asset/src/college.png'
+import oldp from '../../asset/src/oldp.png'
 const Projectapi=[
     
     {
-        id:"1",
+        id:1,
         name:"Boolean ai",
         a:"https://booleanai.com",
         image:boolean,
@@ -14,7 +15,7 @@ const Projectapi=[
         button:"Read More"
     },
     {
-        id:"2",
+        id:2,
         a:"#",
         name:"Attendance Management System",
         image:ams,
@@ -22,7 +23,7 @@ const Projectapi=[
         button:"Read More"
     },
     {
-        id:"3",
+        id:3,
         a:"#",
         name:"Pre Portal Reporting",
         image:prereport,
@@ -30,7 +31,7 @@ const Projectapi=[
         button:"Read More"
     },
     {
-        id:"4",
+        id:4,
         a:"#",
         name:"College Website",
         image:college,
@@ -38,11 +39,19 @@ const Projectapi=[
         button:"Read More"
     },
     {
-        id:"5",
+        id:5,
         a:"#",
         name:"Chat Application",
         image:"https://ceblog.s3.amazonaws.com/wp-content/uploads/2021/03/10114044/image2-8.png",
         discription:"Build a chat application to use a chat for anonymous User and makes some friends and post the all thought u show again and deserves that to use and make some new friend . this is a pravacy and secure alldata form other user.",
+        button:"Read More"
+    },
+    {
+        id:6,
+        a:"https://sumit.mishrilalsahu.in.net",
+        name:"My Portfolio",
+        image:oldp,
+        discription:"Build a portfolio  design to use all person see the profile and check the person all related things whats works. We Build a portfolio for a using some skilled like Reactjs + TailwindCSS, Swiper,and other some functionalities add to work smmothly.",
         button:"Read More"
     },
     

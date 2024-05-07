@@ -4,13 +4,8 @@ import { FaArrowRight } from "react-icons/fa"
 import Serviceapi from './API/serviceapi'
 
 const Service = () =>{
-
     const [serviceData,setserviceData]=useState(Serviceapi)
-
-    return(
-
-        <div>
-            <div className='bg-dark text-white'>
+    return  <div className='bg-dark text-white'>
                 <div className="h-[100px] bg-dark">
                     <nav className="flex align-middle py-4 justify-center" aria-label="Breadcrumb">
                     <ol className="inline-flex items-center  rtl:space-x-reverse ol">
@@ -30,21 +25,15 @@ const Service = () =>{
                             <a href="service" className="ms-1 text-sm font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Services</a>
                         </div>
                         </li>
-                        
                     </ol>
                     </nav>
                 </div>
-                <div className="h-100 grid grid-cols-1 py-5  xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-4 px-2">
+                <div className="h-100 grid grid-cols-1 py-5  xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-2 gap-4 px-2"data-aos="zoom-in" data-aos-delay="200">
                     {
                         Object.values(serviceData).map((services,index) => {
-                            // console.log(user) 
                             const {servicename,discriptions}=services;
-
                             return(
-                                <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
-                                {/* <a href="#">
-                                    <img className="rounded-t-lg" src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171_1280.jpg" alt="" />
-                                </a> */}
+                                <div className="max-w-sm bg-black border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto" key={index} data-aos="zoom-in" data-aos-delay="300">
                                 <div className="card border-0 bg-black "id={index+1}>
                                     <div className='card-header'>
                                         <a href="#">
@@ -66,11 +55,6 @@ const Service = () =>{
                     }
                 </div>
             </div>
-        </div>
-
-
-    )
-
 }
 
 export default Service
